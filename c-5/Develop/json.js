@@ -8,5 +8,16 @@ function workCalander() {
             return Current;
         }
         todayIs();
+
+        for (i = 0; i < workHours.length; i++) {
+            let row = $("<div>").addClass("row");
+            let column = $("<text-area>").text(workHours[i]).addClass("hour");
+            let inputClo = $("<input>").attr("placeholder", "Enter note here").addClass("toDo-input time-block");
+            saveBtn = $('<button>').addClass("btn-primary saveBtn").text("save");
+            $(row).append(column).append(inputClo).append(saveBtn)
+            $("#timeblock").append(row);
+        }
+
+        
     })
 }
