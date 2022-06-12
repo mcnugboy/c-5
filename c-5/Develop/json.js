@@ -18,6 +18,22 @@ function workCalander() {
             $("#timeblock").append(row);
         }
 
-        
+        function addInput() {
+            let idInput = document.getElementsByClassName("toDo-input");
+            let length = idInput.length;
+            for (i = 0; i < length; i++) {
+                idInput[i].id = "input-field-" + (i + 1);
+            }
+        };
+        addInput();
+
+        function saveId() {
+            let saveB = document.getElementsByClassName("saveBtn");
+            let length = saveB.length;
+            for (i = 0; i < length; i++) {
+                saveB[i].id = "saveBtn-Id-" + (i + 1);
+            }
+        };
+        saveId();
     })
 }
